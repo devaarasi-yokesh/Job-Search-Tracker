@@ -56,23 +56,6 @@ A beautiful and motivational job application tracking tool to help you stay orga
 - **Filter**: View applications by specific status
 - **Follow-ups**: Check the reminders section for applications needing follow-up
 
-### Understanding the Messages
-
-#### 🎉 Success Messages (Green)
-- When you apply today
-- When you update status to Interview/Offer
-- Celebrating your total applications
-
-#### 💙 Encouragement Messages (Blue)
-- Welcome message for new users
-- Suggestions for activities during short breaks
-- General motivation and support
-
-#### ⚠️ Warning Messages (Yellow)
-- When it's been more than 3 days since last application
-- Gentle reminders to stay on track
-- Encouragement to apply for at least one job
-
 ## 💾 Data Storage
 
 - All data is stored locally in your browser
@@ -117,8 +100,6 @@ A beautiful and motivational job application tracking tool to help you stay orga
 
 The app uses CSS custom properties and can be easily customized:
 - Change colors in `styles.css`
-- Modify motivation messages in `script.js`
-- Adjust follow-up timing in the `checkFollowUps()` method
 
 ## 🚀 Quick Start
 
