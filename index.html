@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-briefcase"></i> Job Search Tracker</h1>
+            <p class="subtitle">Track your job applications and stay motivated!</p>
+        </header>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-paper-plane"></i>
+                <h3 id="totalApplications">0</h3>
+                <p>Total Applications</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3 id="daysActive">0</h3>
+                <p>Days Active</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <h3 id="daysSinceLast">0</h3>
+                <p>Days Since Last</p>
+            </div>
+        </div>
+
+        <div class="motivation-container" id="motivationContainer">
+            <!-- Motivation messages will be displayed here -->
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2><i class="fas fa-plus-circle"></i> Add New Application</h2>
+                <form id="jobForm">
+                    <div class="form-group">
+                        <label for="companyName">Company Name *</label>
+                        <input type="text" id="companyName" required placeholder="Enter company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position (Optional)</label>
+                        <input type="text" id="position" placeholder="Enter position title">
+                    </div>
+                    <div class="form-group">
+                        <label for="appliedDate">Applied Date *</label>
+                        <input type="date" id="appliedDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option value="applied">Applied</option>
+                            <option value="interview">Interview</option>
+                            <option value="offer">Offer</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i> Add Application
+                    </button>
+                </form>
+            </div>
+
+            <div class="applications-section">
+                <h2><i class="fas fa-list"></i> Your Applications</h2>
+                <div class="filters">
+                    <select id="statusFilter">
+                        <option value="all">All Status</option>
+                        <option value="applied">Applied</option>
+                        <option value="interview">Interview</option>
+                        <option value="offer">Offer</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                    <button id="clearFilters" class="btn-secondary">
+                        <i class="fas fa-filter"></i> Clear Filters
+                    </button>
+                </div>
+                <div id="applicationsList" class="applications-list">
+                    <!-- Applications will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="follow-up-section" id="followUpSection">
+            <h2><i class="fas fa-bell"></i> Follow-up Reminders</h2>
+            <div id="followUpList">
+                <!-- Follow-up reminders will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
